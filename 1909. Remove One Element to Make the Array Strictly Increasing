@@ -19,6 +19,7 @@ public:
             if (inc(temp)) {
                 return true;
             }
+            temp.insert(temp.begin() + i, nums[i]);
         }
         return false;
     }
