@@ -13,8 +13,8 @@ public:
         return false;
     }
     bool canBeIncreasing(vector<int>& nums) {
+        vector<int> temp(nums.begin(), nums.end());
         for (int i = 0; i < nums.size(); ++i) {
-            vector<int> temp(nums.begin(), nums.end());
             temp.erase(temp.begin() + i);
             if (inc(temp)) {
                 return true;
