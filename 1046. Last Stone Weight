@@ -20,11 +20,9 @@ public:
                 stones.pop_back();
             } else if ((stones[last] != stones[slast]) &&
                        (stones[last] > stones[slast])) {
-                int a = stones[last];
-                int b = stones[slast];
                 stones.pop_back();
                 stones.pop_back();
-                stones.push_back(a - b);
+                stones.push_back(stones[last]-stones[slast]);
             }
         }
         return 0;
