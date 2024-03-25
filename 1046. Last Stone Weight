@@ -18,8 +18,7 @@ public:
             if (stones[last] == stones[slast]) {
                 stones.pop_back();
                 stones.pop_back();
-            } else if ((stones[last] != stones[slast]) &&
-                       (stones[last] > stones[slast])) {
+            } else if (stones[last] != stones[slast]) {
                 stones.pop_back();
                 stones.pop_back();
                 stones.push_back(stones[last]-stones[slast]);
