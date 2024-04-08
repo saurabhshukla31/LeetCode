@@ -10,7 +10,7 @@ public:
                 count++;
                 if(count==3)
                 {
-                    break;
+                    return true;
                 }
             }
             else if(arr[i]%2==0)
@@ -18,13 +18,6 @@ public:
                 count=0;
             }
         }
-        if(count==3)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 };
