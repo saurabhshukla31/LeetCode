@@ -6,7 +6,10 @@ public:
         int maxi = -1;
         for(int i = n - 1; i >= 0; i--) {
             ans[i] = maxi;
-            maxi = max(arr[i], maxi);
+            if(arr[i]>maxi)
+            {
+                maxi=arr[i];
+            }
         }
         return ans;
     }
