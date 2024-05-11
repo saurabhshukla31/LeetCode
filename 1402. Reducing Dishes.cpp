@@ -4,16 +4,16 @@ public:
         int n = arr.size();
         sort(arr.begin(), arr.end());
 
-        int totalSatisfaction = 0;
-        int maxTotalSatisfaction = 0;
+        int sum = 0;
+        int maxi = 0;
 
         for (int i = 0; i < n; ++i) {
-            totalSatisfaction = 0;
+            sum = 0;
             for (int j = i; j < n; ++j) {
-                totalSatisfaction += arr[j] * (j - i + 1);
+                sum += arr[j] * (j - i + 1);
             }
-            maxTotalSatisfaction = max(maxTotalSatisfaction, totalSatisfaction);
+            maxi = max(maxi, sum);
         }
-        return maxTotalSatisfaction;
+        return maxi;
     }
 };
